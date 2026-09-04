@@ -729,8 +729,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Climax Floating Polaroid Taps
+  // Climax Floating Polaroid Taps & Staggered Pop-In Observer
+  const climaxStage = document.getElementById('climax-stage');
   const driftItems = document.querySelectorAll('.drift-polaroid');
+
+  function triggerClimaxPopIn() {
+    driftItems.forEach((card, index) => {
+      card.classList.add('pop-in');
+      setTimeout(() => {
+        burstHearts(4);
+        playTone(600 + index * 60, 'sine', 0.04, 0.08);
+      }, (index + 1) * 250);
+    });
+  }
+
+  if ('IntersectionObserver' in window && climaxStage) {
+    const climaxObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          triggerClimaxPopIn();
+          climaxObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    climaxObserver.observe(climaxStage);
+  } else {
+    // Fallback: Trigger after small delay
+    setTimeout(triggerClimaxPopIn, 1200);
+  }
+
   driftItems.forEach(card => {
     card.addEventListener('click', () => {
       burstHearts(14);
