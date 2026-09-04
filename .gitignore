@@ -1,0 +1,12 @@
+﻿node_modules/
+raw_frames/
+together_frames/
+*.mp4
+crop_*.js
+extract*.js
+download_*.js
+fetch_*.js
+clean_*.js
+update_*.js
+.DS_Store
+Thumbs.db

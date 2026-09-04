@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Happy Birthday My Love ❤️</title>
+  <!-- Google Fonts: Crisp, High-Legibility Romantic Serifs & Scripts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Caveat:wght@600;700&family=Great+Vibes&family=Lora:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@400;500;600&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Audio Element for "This Song Reminds Me Of You" -->
+  <audio id="romantic-audio" src="assets/song.mp3" preload="auto"></audio>
+
+  <!-- Mobile Frame Container -->
+  <div class="mobile-frame" id="app-frame">
+
+    <!-- Ambient Floating Stars & Sparkles -->
+    <div class="stars-layer" id="stars-layer"></div>
+    
+    <!-- ========================================== -->
+    <!-- SCREEN 0: ROMANTIC HEART GATEWAY (SPLASH)  -->
+    <!-- ========================================== -->
+    <section id="gateway-screen" class="screen active">
+      <div class="gateway-wrapper">
+        <p class="gateway-pre-title">Before you take a step further...</p>
+
+        <!-- Big Glowing Animated Romantic Heart -->
+        <div class="gateway-heart-container" id="gateway-heart-btn" role="button" tabindex="0" title="Tap to enter my heart">
+          <div class="heart-pulse-aura aura-1"></div>
+          <div class="heart-pulse-aura aura-2"></div>
+          <div class="gateway-heart-icon-box">
+            <svg class="gateway-pulsing-heart" viewBox="0 0 24 24" width="76" height="76">
+              <defs>
+                <linearGradient id="gatewayHeartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ff6584" />
+                  <stop offset="50%" stop-color="#ff1493" />
+                  <stop offset="100%" stop-color="#d81b60" />
+                </linearGradient>
+                <filter id="gatewayHeartGlow" x="-30%" y="-30%" width="160%" height="160%">
+                  <feGaussianBlur stdDeviation="3.5" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <path fill="url(#gatewayHeartGrad)" filter="url(#gatewayHeartGlow)" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </div>
+          <span class="gateway-tap-hint">Tap my Heart ♡</span>
+        </div>
+
+        <div class="gateway-text-block">
+          <h2 class="gateway-romantic-quote">"In a world full of billions,<br>every beat of my heart belongs to you."</h2>
+        </div>
+
+        <p class="gateway-foot-sub">A special place made only for you 🔐</p>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SCREEN 1: PASSCODE LOCK SCREEN             -->
+    <!-- ========================================== -->
+    <section id="lock-screen" class="screen">
+      <div class="lock-wrapper">
+        <h1 class="lock-cursive-title">It'll let you enter...</h1>
+        
+        <!-- Glowing Hot-Pink Heart -->
+        <div class="heart-pulse-box">
+          <svg class="neon-heart" viewBox="0 0 24 24" width="48" height="48">
+            <path fill="#ff2d75" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+
+        <!-- 6 Passcode Indicator Dots -->
+        <div class="passcode-dots-container" id="passcode-dots">
+          <div class="passcode-dot"></div>
+          <div class="passcode-dot"></div>
+          <div class="passcode-dot"></div>
+          <div class="passcode-dot"></div>
+          <div class="passcode-dot"></div>
+          <div class="passcode-dot"></div>
+        </div>
+
+        <!-- Sleek Glass Keypad -->
+        <div class="glass-keypad">
+          <button class="keypad-btn" data-val="1">1</button>
+          <button class="keypad-btn" data-val="2">2</button>
+          <button class="keypad-btn" data-val="3">3</button>
+          <button class="keypad-btn" data-val="4">4</button>
+          <button class="keypad-btn" data-val="5">5</button>
+          <button class="keypad-btn" data-val="6">6</button>
+          <button class="keypad-btn" data-val="7">7</button>
+          <button class="keypad-btn" data-val="8">8</button>
+          <button class="keypad-btn" data-val="9">9</button>
+          <button class="keypad-btn action-key" data-val="C">C</button>
+          <button class="keypad-btn" data-val="0">0</button>
+          <button class="keypad-btn action-key" data-val="back">⌫</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- MAIN STORY FLOW CONTAINER                  -->
+    <!-- ========================================== -->
+    <main id="main-flow" class="screen">
+
+      <!-- Ambient Background Layers -->
+      <div class="cinematic-backdrop"></div>
+      <div class="backdrop-tint"></div>
+
+      <!-- ========================================== -->
+      <!-- SCREEN 2: TAP THE ENVELOPE                -->
+      <!-- (ONLY THIS IS SHOWN INITIALLY)             -->
+      <!-- ========================================== -->
+      <section class="stage-section envelope-stage" id="envelope-section">
+        <p class="glowing-label">TAP THE ENVELOPE</p>
+
+        <!-- 3D Realistic Interactive Envelope -->
+        <div class="envelope-3d-box" id="envelope-box">
+          <div class="envelope-pocket">
+            <div class="envelope-back-wall"></div>
+            <!-- Peeking Letter Card -->
+            <div class="envelope-sliding-letter" id="sliding-letter">
+              <span class="letter-peek-cursive">With all my heart for you...</span>
+            </div>
+            <!-- Front Triangular Fold -->
+            <div class="envelope-front-flaps"></div>
+            <!-- Top Flap with Golden Seal -->
+            <div class="envelope-top-flap" id="top-flap">
+              <div class="golden-heart-seal" id="seal">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="#ffd700">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Birthday Subtitle Reveal -->
+        <h2 class="birthday-calligraphy" id="birthday-subtext">Happiest Birthday to My Love</h2>
+      </section>
+
+      <!-- ============================================================== -->
+      <!-- SCREEN 3: THE LOVE LETTER (REVEALED WHEN ENVELOPE IS TAPPED)   -->
+      <!-- ============================================================== -->
+      <section class="stage-section letter-stage is-hidden" id="letter-section">
+        <!-- Ultra-Crisp Sharp White Parchment Paper Card -->
+        <article class="parchment-letter-card">
+          <div class="parchment-border-inner">
+            <h3 class="parchment-title">My Dearest Love ❤️</h3>
+            
+            <!-- Container where text types out slowly letter by letter with razor sharpness -->
+            <div class="parchment-text" id="typewriter-body"></div>
+            <span class="typing-cursor" id="typing-cursor">|</span>
+          </div>
+        </article>
+      </section>
+
+      <!-- ============================================================== -->
+      <!-- SCREENS 4 TO 7: HIDDEN UNTIL LETTER FINISHES TYPING COMPLETELY -->
+      <!-- ============================================================== -->
+      <div id="after-letter-content" class="after-letter-content is-hidden">
+
+        <!-- SCREEN 4: CELEBRATING OUR TOGETHERNESS (SLOW 1-BY-1 POP-UP) -->
+        <section class="stage-section polaroid-stage" id="togetherness-stage">
+          <h2 class="script-heading">Celebrating our Togetherness</h2>
+
+          <!-- Hanging Clothesline Gallery -->
+          <div class="clothesline-area" id="clothesline-deck">
+            <!-- Rope 1 (4 Polaroids) -->
+            <div class="string-line string-1">
+              <div class="polaroid-wrapper" data-idx="0" style="--rot: -4deg; --delay: 0.2s;">
+                <div class="wooden-pin"></div>
+                <div class="polaroid-frame">
+                  <img src="assets/photo1.jpg" alt="Memory 1">
+                </div>
+              </div>
+              <div class="polaroid-wrapper" data-idx="1" style="--rot: 3deg; --delay: 1.0s;">
+                <div class="wooden-pin"></div>
+                <div class="polaroid-frame">
+                  <img src="assets/photo2.jpg" alt="Memory 2">
+                </div>
+              </div>
+              <div class="polaroid-wrapper" data-idx="2" style="--rot: -2.5deg; --delay: 1.8s;">
+                <div class="wooden-pin"></div>
+                <div class="polaroid-frame">
+                  <img src="assets/photo3.jpg" alt="Memory 3">
+                </div>
+              </div>
+              <div class="polaroid-wrapper" data-idx="3" style="--rot: 5deg; --delay: 2.6s;">
+                <div class="wooden-pin"></div>
+                <div class="polaroid-frame">
+                  <img src="assets/photo4.jpg" alt="Memory 4">
+                </div>
+              </div>
+            </div>
+
+            <!-- Rope 2 (4 Polaroids) -->
+            <div class="string-line string-2">
+              <div class="polaroid-wrapper" data-idx="4" style="--rot: 4deg; --delay: 3.4s;">
+                <div class="wooden-pin"></div>
+                <div class="polaroid-frame">
+                  <img src="assets/photo5.jpg" alt="Memory 5">
+                </div>
+              </div>
+              <div class="polaroid-wrapper" data-idx="5" style="--rot: -3deg; --delay: 4.2s;">
+                <div class="wooden-pin"></div>
+                <div class="polaroid-frame">
+                  <img src="assets/photo6.jpg" alt="Memory 6">
+                </div>
+              </div>
+              <div class="polaroid-wrapper" data-idx="6" style="--rot: 2.5deg; --delay: 5.0s;">
+                <div class="wooden-pin"></div>
+                <div class="polaroid-frame">
+                  <img src="assets/photo7.jpg" alt="Memory 7">
+                </div>
+              </div>
+              <div class="polaroid-wrapper" data-idx="7" style="--rot: -4.5deg; --delay: 5.8s;">
+                <div class="wooden-pin"></div>
+                <div class="polaroid-frame">
+                  <img src="assets/photo8.jpg" alt="Memory 8">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SCREEN 5: SPINNING VINYL & REAL AUDIO PLAYER -->
+        <section class="stage-section vinyl-stage">
+          <h2 class="script-heading">This Song Reminds Me Of You</h2>
+
+          <div class="music-interactive-row">
+            <!-- Spinning Vinyl Disc -->
+            <div class="vinyl-holder" id="vinyl-trigger">
+              <div class="realistic-vinyl" id="vinyl-element">
+                <div class="vinyl-light-sheen"></div>
+                <div class="vinyl-groove-rings"></div>
+                <div class="vinyl-center-sticker">
+                  <img src="assets/song_cover.jpg" alt="Eppadi Vandhaayo Cover">
+                </div>
+              </div>
+            </div>
+
+            <!-- Spotify-like Glassmorphism Player -->
+            <div class="spotify-glass-player">
+              <div class="spotify-header">
+                <img src="assets/song_cover.jpg" alt="Eppadi Vandhaayo Poster" class="mini-cover">
+                <div class="spotify-meta">
+                  <div class="title-heart-row">
+                    <h4 class="track-title">Eppadi Vandhaayo</h4>
+                    <span class="like-heart-btn" id="like-btn">❤️</span>
+                  </div>
+                  <p class="track-artist">Aaromaley • Chinmayi, Siddhu Kumar</p>
+                </div>
+              </div>
+
+              <!-- Dedicated "Click to Play Song" Button -->
+              <div class="play-btn-row">
+                <button class="play-song-action-btn" id="play-song-btn">
+                  <span class="play-btn-icon" id="play-btn-icon">▶</span>
+                  <span id="play-btn-label">Click to Play Song</span>
+                </button>
+              </div>
+
+              <div class="romantic-quote-box">
+                <p>All the love songs were about you ♡</p>
+              </div>
+
+              <!-- Progress Bar -->
+              <div class="spotify-track-bar" id="track-bar-container">
+                <div class="track-progress-fill" id="track-fill"></div>
+              </div>
+              <div class="track-timestamp-row">
+                <span id="curr-time">0:00</span>
+                <span id="total-time">2:49</span>
+              </div>
+
+              <!-- Real Synchronized Lyrics -->
+              <div class="spotify-lyrics-card" id="lyrics-card">
+                <div class="lyrics-header-tag">
+                  <span class="lyrics-icon">🎤</span>
+                  <span>LYRICS • EPPADI VANDHAAYO</span>
+                </div>
+                <div class="lyrics-scroll-container" id="lyrics-stream">
+                  <p class="lyric-line active" data-time="0">Mmm… mmm… 🎶</p>
+                  <p class="lyric-line" data-time="12">Eppadi vanthaayo... Punnagai thanthaayo... 🌸</p>
+                  <p class="lyric-line" data-time="19">Eppadi vanthaayo... Ennaiyum kodaayo 💕</p>
+                  <p class="lyric-line" data-time="26">Kelaamalae kayil vantha katti thangam neeyae ✨</p>
+                  <p class="lyric-line" data-time="34">Thallaamal thallaaduraen naanae... 🥰</p>
+                  <p class="lyric-line" data-time="42">Meendum manam minjiduthae ennidaththil thaanae... 💫</p>
+                  <p class="lyric-line" data-time="50">Mudha murai azhagunnu ada enakku naan therinjaen 💖</p>
+                  <p class="lyric-line" data-time="59">Oru murai unnai nerungaiyil palamurai tholainjaen... 🌹</p>
+                  <p class="lyric-line" data-time="70">Konjalum konjaayo... Minjalum minjaayo 🌸</p>
+                  <p class="lyric-line" data-time="78">En manam panjaayo... Parakkum sellaayo ✨</p>
+                  <p class="lyric-line" data-time="87">Chinna chinna nerangalil sikkikkondaen naanae... 💖</p>
+                  <p class="lyric-line" data-time="95">Unnidaththil oviyamaaithaanae... 🎨</p>
+                  <p class="lyric-line" data-time="103">Kannaadiyin bimpangalil naan illaiyae neeyae... 🪞</p>
+                  <p class="lyric-line" data-time="112">Paththaama poyaachchae bhoomiyellaam inga... 🌍</p>
+                  <p class="lyric-line" data-time="120">Ketkkaama vaaraendi un manasil naan thanga... 🏡</p>
+                  <p class="lyric-line" data-time="128">Kannukkulla un kanava paakkuraendi... 👁️</p>
+                  <p class="lyric-line" data-time="136">Kandathellaam palikkaththaan venduraenadi... 🤲</p>
+                  <p class="lyric-line" data-time="144">Ennai paththi innum solla thonuthadi... 💬</p>
+                  <p class="lyric-line" data-time="152">Ippadiyae naalum poga venumadi... ❤️</p>
+                  <p class="lyric-line" data-time="160">Oru murai unnai nerungaiyil palamurai tholainjaen... ♾️</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SCREEN 6: VINTAGE CASSETTE & 35MM FILM (SLIDING LETTER ON SCROLL) -->
+        <section class="stage-section cassette-stage" id="cassette-stage">
+          <!-- Retro Red Radio / Cassette -->
+          <div class="retro-cassette-unit">
+            <div class="cassette-aerial"></div>
+            <div class="cassette-chassis">
+              <div class="reel-wheel left-wheel">
+                <div class="wheel-spokes spinning-wheel"></div>
+              </div>
+              <div class="tuning-indicator-dot"></div>
+              <div class="reel-wheel right-wheel">
+                <div class="wheel-spokes spinning-wheel"></div>
+              </div>
+            </div>
+            
+            <!-- Letter Ticket that Slides OUT on Scroll -->
+            <div class="cassette-white-tag" id="radio-slip">
+              <p class="tag-bold">I Love You...</p>
+              <span class="tag-sub">As Always ❤️</span>
+            </div>
+          </div>
+
+          <p class="radio-tagline">Always tuned to your heart 📻</p>
+
+          <!-- 35mm Negative Film Strip (Initially Closed, Unrolls on Click) -->
+          <div class="filmstrip-wrapper" id="filmstrip-wrapper">
+            <div class="filmstrip-badge" id="filmstrip-badge" role="button" tabindex="0" title="Tap to unroll memories">
+              <span class="badge-text">CLICK HERE</span>
+            </div>
+            <div class="filmstrip-track" id="filmstrip-track">
+              <div class="filmstrip-sprockets top-sprockets"></div>
+
+              <!-- Closed State Placeholder -->
+              <div class="filmstrip-closed-reel" id="filmstrip-closed-reel">
+                <span class="reel-hint-icon">🎞️</span>
+                <span class="reel-hint-text">Tap "CLICK HERE" to unroll memories</span>
+              </div>
+
+              <!-- Unrolled Photo Strip (Max 5 Photos) -->
+              <div class="filmstrip-frames" id="filmstrip-frames">
+                <div class="film-single-frame"><img src="assets/photo1.jpg" alt="Memory 1"></div>
+                <div class="film-single-frame"><img src="assets/photo2.jpg" alt="Memory 2"></div>
+                <div class="film-single-frame"><img src="assets/photo3.jpg" alt="Memory 3"></div>
+                <div class="film-single-frame"><img src="assets/photo4.jpg" alt="Memory 4"></div>
+                <div class="film-single-frame"><img src="assets/photo5.jpg" alt="Memory 5"></div>
+              </div>
+              <div class="filmstrip-sprockets bottom-sprockets"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SCREEN 7: CLIMAX & FLOATING MEMORIES -->
+        <section class="stage-section climax-stage" id="climax-stage">
+          <h2 class="climax-script-quote">I'll love you till the day that I die</h2>
+
+          <div class="floating-field" id="floating-field">
+            <div class="drift-polaroid d-1"><img src="assets/photo1.jpg"></div>
+            <div class="drift-polaroid d-2"><img src="assets/photo2.jpg"></div>
+            <div class="drift-polaroid d-3"><img src="assets/photo3.jpg"></div>
+            <div class="drift-polaroid d-4"><img src="assets/photo4.jpg"></div>
+            <div class="drift-polaroid d-5"><img src="assets/photo5.jpg"></div>
+            <div class="drift-polaroid d-6"><img src="assets/photo6.jpg"></div>
+            <div class="drift-polaroid d-7"><img src="assets/photo7.jpg"></div>
+            <div class="drift-polaroid d-8"><img src="assets/photo8.jpg"></div>
+          </div>
+
+          <div class="brand-footer">
+            <span>foreverinvites._</span>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-overlay" id="lightbox-modal">
+      <div class="lightbox-box">
+        <button class="lightbox-close-btn" id="close-modal">&times;</button>
+        <div class="lightbox-card">
+          <img id="lightbox-image" src="" alt="Enlarged Photo">
+          <p class="lightbox-caption">You & Me Forever ❤️</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
