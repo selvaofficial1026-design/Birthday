@@ -1,13 +1,13 @@
-﻿{
-   name: birthday,
-  version: 1.0.0,
-  description: Romantic Birthday Celebration Web Experience,
-  main: server.js,
-  scripts: {
-    start: node server.js,
-    build: echo Static build ready 
+{
+  "name": "birthday",
+  "version": "1.0.0",
+  "description": "Romantic Birthday Celebration Web Experience",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "echo 'Static build ready'"
   },
-   keywords: [],
-  author: selvaofficial1026-design,
-  license: MIT
+  "keywords": [],
+  "author": "selvaofficial1026-design",
+  "license": "MIT"
 }
